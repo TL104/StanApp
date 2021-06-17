@@ -23,6 +23,9 @@
                                 <state key="normal" title="ATTACK">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JoA-Lc-Zt3" kind="show" id="UfO-i7-QiC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CG-Et-tnj">
                                 <rect key="frame" x="194" y="554" width="200" height="50"/>
@@ -152,6 +155,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWm-Mr-GdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939" y="-631"/>
+        </scene>
+        <!--Attack Screen-->
+        <scene sceneID="0HQ-CP-Ed9">
+            <objects>
+                <viewController id="JoA-Lc-Zt3" customClass="AttackScreen" customModule="StanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3L-RJ-sYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qml-gU-OS1"/>
+                        <color key="backgroundColor" red="0.0" green="0.0021740602240000002" blue="0.46497077549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZBN-o0-cJ2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceh-eI-xYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="1449"/>
         </scene>
     </scenes>
 </document>
