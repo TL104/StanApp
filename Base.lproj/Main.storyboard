@@ -63,6 +63,9 @@
                                 <state key="normal" title="DONE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="YnJ-Lt-bod" eventType="touchUpInside" id="Qpt-xh-gqj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-pp-daQ">
                                 <rect key="frame" x="194" y="430" width="200" height="40"/>
@@ -72,6 +75,9 @@
                                 <state key="normal" title="INITIATIVE">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="d20:" destination="YnJ-Lt-bod" eventType="touchUpInside" id="UFd-Az-3nl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-Z0-d4e">
                                 <rect key="frame" x="20" y="44" width="374" height="80"/>
@@ -81,7 +87,7 @@
                                 <color key="textColor" red="1" green="0.85309710049999998" blue="0.1829385597" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2x-Rk-sUJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="totalOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2x-Rk-sUJ">
                                 <rect key="frame" x="20" y="249" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,6 +153,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0021740602240000002" blue="0.46497077549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gxs-XZ-LUl"/>
+                    <connections>
+                        <outlet property="die1OUT" destination="jxY-Lt-Yuy" id="mV1-jH-8FN"/>
+                        <outlet property="healthOUT" destination="e9S-8h-3jJ" id="W4I-Qj-A9B"/>
+                        <outlet property="nameOUT" destination="P7j-Z0-d4e" id="kti-vg-pBX"/>
+                        <outlet property="totalOUT" destination="B2x-Rk-sUJ" id="J8K-BR-gNE"/>
+                        <outlet property="xpOUT" destination="Ljo-Jw-Hqe" id="I3w-PB-aGY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsU-2p-S7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
