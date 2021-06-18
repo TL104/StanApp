@@ -9,12 +9,11 @@ import UIKit
 
 class SkillCheckScreen: UIViewController {
     
-   
+    @IBOutlet weak var totalOUT: UILabel!
+    @IBOutlet weak var crit: UILabel!
     @IBOutlet weak var die1OUT: UILabel!
     @IBOutlet weak var die2OUT: UILabel!
     @IBOutlet weak var skillOUT: UILabel!
-    @IBOutlet weak var crit: UILabel!
-    @IBOutlet weak var totalOUT: UILabel!
    
     var advantage:Bool = false
     var disadvantage:Bool = false
@@ -29,9 +28,7 @@ class SkillCheckScreen: UIViewController {
         totalOUT.text = ""
     }
     
-    @IBAction func doneButton(_ sender: Any){
-        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
-    }
+    
     
     @IBAction func acrobaticsCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
@@ -555,7 +552,6 @@ class SkillCheckScreen: UIViewController {
             totalOUT.text = String(total)
         }
     }
-    
     @IBAction func strengthCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
@@ -695,6 +691,10 @@ class SkillCheckScreen: UIViewController {
     @IBAction func disadvantageSwitch(_ sender: Any){
         if((sender as AnyObject).isOn == true){disadvantage = true}
         else{disadvantage = false}
+    }
+    
+    @IBAction func doneButton(_ sender: Any){
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
 
