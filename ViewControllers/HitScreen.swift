@@ -47,8 +47,9 @@ class HitScreen: UIViewController {
         
     }
     
-    @IBAction func doneButton(_ sender: Any){
-        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
+    @IBAction func sneakAttackSwitch(_ sender: Any){
+        if((sender as AnyObject).isOn == true){sneak = true}
+        else{sneak = false}
     }
     
     @IBAction func rollDice(_ sender: Any) {
@@ -105,9 +106,9 @@ class HitScreen: UIViewController {
         
         totalOUT.text = String(total)
     }
-    @IBAction func sneakAttackSwitch(_ sender: Any){
-        if((sender as AnyObject).isOn == true){sneak = true}
-        else{sneak = false}
+    
+    @IBAction func doneButton(_ sender: Any){
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
 
