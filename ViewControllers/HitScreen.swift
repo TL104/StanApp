@@ -86,6 +86,7 @@ class HitScreen: UIViewController {
             let sDie6 = dice.getD6()
             
             total += (sDie1 + sDie2 + sDie3 + sDie4 + sDie5 + sDie6)
+            
             if(critical){total += 36}
             
             sDie1OUT.text = String(sDie1)
