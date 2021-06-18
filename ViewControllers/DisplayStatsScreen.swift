@@ -9,7 +9,6 @@ import UIKit
 
 class DisplayStatsScreen: UIViewController {
     
-    
     @IBOutlet weak var nameOUT: UILabel!
     @IBOutlet weak var healthOUT: UILabel!
     @IBOutlet weak var xpOUT: UILabel!
@@ -41,7 +40,6 @@ class DisplayStatsScreen: UIViewController {
     @IBOutlet weak var intelligenceOUT: UILabel!
     @IBOutlet weak var wisdomOUT: UILabel!
     @IBOutlet weak var chrismaOUT: UILabel!
-    
     
     override func viewDidLoad(){
         super.viewDidLoad()
