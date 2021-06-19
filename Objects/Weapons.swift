@@ -10,6 +10,7 @@ import UIKit
 class Weapons: NSObject {
 
     struct weaponNode{
+        var name:String = ""
         var bonus:Int = 0
         var proficiency:Bool = false
         var onHand:Bool = false
@@ -18,6 +19,7 @@ class Weapons: NSObject {
     var dwarvanThrower:weaponNode = weaponNode()
     var stanGauntlet:weaponNode = weaponNode()
     
+    func getDtName()->String{return "Dwarvan Thrower"}
     func getDwarvenThrower(playerObj:Player)->Int{
         dwarvanThrower.bonus = 3
         dwarvanThrower.proficiency = false
@@ -29,7 +31,7 @@ class Weapons: NSObject {
         else if(dwarvanThrower.proficiency){return (playerObj.getDexterity() + dwarvanThrower.bonus)}
         else{return dwarvanThrower.bonus}
     }
-    
+    func getSgName()->String{return "Stan's Gauntlet"}
     func getStanGauntlet(playerObj:Player)->Int{
         
         stanGauntlet.bonus = 2

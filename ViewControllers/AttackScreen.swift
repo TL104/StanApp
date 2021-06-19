@@ -13,6 +13,10 @@ class AttackScreen: UIViewController {
     @IBOutlet weak var totalOUT: UILabel!
     @IBOutlet weak var die1OUT: UILabel!
     @IBOutlet weak var die2OUT: UILabel!
+    
+    @IBOutlet weak var weapon1OUT:UILabel!
+    @IBOutlet weak var weapon2OUT:UILabel!
+    @IBOutlet weak var weapon3OUT:UILabel!
    
     var advantage:Bool = false
     var disadvantage:Bool = false
@@ -27,6 +31,9 @@ class AttackScreen: UIViewController {
         die1OUT.text = ""
         die2OUT.text = ""
         totalOUT.text = ""
+        weapon1OUT.text = weapon.getSgName()
+        weapon2OUT.text = weapon.getDtName()
+        weapon3OUT.text = "only 2 weapons"
 
     }
     
@@ -40,17 +47,17 @@ class AttackScreen: UIViewController {
             die2OUT.text = String(result.1)
             if(result.2 == 20){crit.text = "***CRITICAL HIT***"; critical = true}
             else{crit.text = ""; critical = false}
-            if(weapon1){total += weapon.getStanGauntlet(playerObj:player)}
-            else if(weapon2){total += (1 + player.getDexterity() + player.getProficiencyBonus())}
-            else if(weapon3){total += (weapon.getDwarvenThrower(playerObj:player))}
+            if(weapon1){total += weapon.getStanGauntlet(playerObj: player)}
+//            else if(weapon2){total += (1 + player.getDexterity() + player.getProficiencyBonus())}
+            else if(weapon2){total += weapon.getDwarvenThrower(playerObj:player)}
             totalOUT.text = String(total)
         }
         else{
             die2OUT.text = ""
             if(result.2 == 20){crit.text = "***CRITICAL HIT***"; critical = true}
             else{crit.text = ""; critical = false}
-            if(weapon1){total += 2}
-            else if(weapon2){total += 1}
+            if(weapon1){total += weapon.getStanGauntlet(playerObj: player)}
+            else if(weapon2){total += weapon.getDwarvenThrower(playerObj:player)}
             else if(weapon3){total += 3}
             totalOUT.text = String(total)
         }
@@ -66,28 +73,28 @@ class AttackScreen: UIViewController {
         if((sender as AnyObject).isOn == true){disadvantage = true}
         else{disadvantage = false}
     }
-//    @IBAction func weapon1Switch(_ sender: Any){
-//        if((sender as AnyObject).isOn == true){weapon1 = true}
-//        else{weapon1 = false}
-//    }
-//    @IBAction func weapon2Switch(_ sender: Any){
-//        if((sender as AnyObject).isOn == true){weapon2 = true}
-//        else{weapon2 = false}
-//    }
-//    @IBAction func weapon3Switch(_ sender: Any){
-//        if((sender as AnyObject).isOn == true){weapon3 = true}
-//        else{weapon3 = false}
-//    }
+    @IBAction func weapon1Switch(_ sender: Any){
+        if((sender as AnyObject).isOn == true){weapon1 = true}
+        else{weapon1 = false}
+    }
+    @IBAction func weapon2Switch(_ sender: Any){
+        if((sender as AnyObject).isOn == true){weapon2 = true}
+        else{weapon2 = false}
+    }
+    @IBAction func weapon3Switch(_ sender: Any){
+        if((sender as AnyObject).isOn == true){weapon3 = true}
+        else{weapon3 = false}
+    }
     
     @IBAction func missButton(_ sender: Any){
         navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let hitVC = segue.destination as! HitScreen
-//        hitVC.weapon1 = weapon1
-//        hitVC.weapon2 = weapon2
-//        hitVC.weapon3 = weapon3
-//        hitVC.critical = critical
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let hitVC = segue.destination as! HitScreen
+        hitVC.weapon1 = weapon1
+        hitVC.weapon2 = weapon2
+        hitVC.weapon3 = weapon3
+        hitVC.critical = critical
+    }
 }

@@ -20,6 +20,9 @@ class HitScreen: UIViewController {
     var sneak:Bool = false
 
     @IBOutlet weak var totalOUT: UILabel!
+    
+    @IBOutlet weak var weaponOUT: UILabel!
+    
     @IBOutlet weak var die1OUT: UILabel!
     @IBOutlet weak var die2OUT: UILabel!
     
@@ -44,6 +47,7 @@ class HitScreen: UIViewController {
         sDie4OUT.text = ""
         sDie5OUT.text = ""
         sDie6OUT.text = ""
+        weaponOUT.text = ""
         
     }
     
@@ -55,24 +59,26 @@ class HitScreen: UIViewController {
     @IBAction func rollDice(_ sender: Any) {
         var total:Int = 0
         if(weapon1){
+            weaponOUT.text = weapon.getSgName()
             let die1 = dice.getD4()
             let die2 = dice.getD4()
-            total = (die1 + die2 + 2)
+            total = (die1 + die2 + weapon.getStanGauntlet(playerObj: player) - player.getProficiencyBonus())
             if(critical){total += 8}
             die1OUT.text = String(die1)
             die2OUT.text = String(die2)
         }
-        else if(weapon2){
+        else if(weapon3){
             let die1 = dice.getD8()
             total = (die1 + 1 + player.getDexterity())
             if(critical){total += 8}
             die1OUT.text = String(die1)
             die2OUT.text = ""
         }
-        else if(weapon3){
+        else if(weapon2){
+            weaponOUT.text = weapon.getDtName()
             let die1 = dice.getD4()
             let die2 = dice.getD8()
-            total = (die1 + die2 + 3 + player.getDexterity())
+            total = (die1 + die2 + weapon.getDwarvenThrower(playerObj:player))
             if(critical){total += 12}
             die1OUT.text = String(die1)
             die2OUT.text = String(die2)
