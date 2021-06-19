@@ -9,19 +9,28 @@ import UIKit
 
 class AddXPScreen: UIViewController {
 
- 
-    @IBOutlet weak var xpOUT: UILabel!
-    @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var currentXpLabel: UILabel!
+    @IBOutlet weak var currentXpOUT: UILabel!
+    
+    @IBOutlet weak var newXpLabel: UILabel!
     @IBOutlet weak var newXpOUT: UILabel!
+    
+    @IBOutlet weak var input: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        xpOUT.text = String(player.getXp())
-        
+        currentXpLabel.text = "Current XP:"
+        currentXpOUT.text = String(player.getXp())
+        newXpLabel.text = ""
+        newXpOUT.text = ""
     }
     @IBAction func addXp(_ sender: Any){
         if let number = Int(input.text!){
             player.addXp(number:number)
+            
+            currentXpLabel.text = ""
+            currentXpOUT.text = ""
+            newXpLabel.text = "New XP:"
             newXpOUT.text = String(player.getXp())
             input.resignFirstResponder()
         }
