@@ -38,6 +38,11 @@ class HitScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        totalOUT.text = ""
+        
+        weaponOUT.text = ""
+        
         die1OUT.text = ""
         die2OUT.text = ""
         
@@ -47,7 +52,7 @@ class HitScreen: UIViewController {
         sDie4OUT.text = ""
         sDie5OUT.text = ""
         sDie6OUT.text = ""
-        weaponOUT.text = ""
+        
         
     }
     
