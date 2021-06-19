@@ -5,6 +5,10 @@
 //  Created by Tyler Lawhorn on 6/11/21.
 //
 
+/* returns an Int array with the die1 = raw d20, die2 = raw d20_2
+(only applies with adv./disadv.  and d20 = is the result of adv.
+ disadv. */
+
 import UIKit
 
 class Dice: NSObject {

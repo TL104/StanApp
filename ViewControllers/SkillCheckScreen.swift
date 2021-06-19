@@ -32,7 +32,11 @@ class SkillCheckScreen: UIViewController {
     
     @IBAction func acrobaticsCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
+        
         var total:Int = result.2
+        
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
         
         skillOUT.text = "Acrobatics"
         die1OUT.text = String(result.0)
@@ -58,6 +62,11 @@ class SkillCheckScreen: UIViewController {
             total += player.getAcrobatics()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
+        
     }
     @IBAction func animalHandelingCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
@@ -121,6 +130,9 @@ class SkillCheckScreen: UIViewController {
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
         
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
+        
         skillOUT.text = "Athletics"
         die1OUT.text = String(result.0)
         
@@ -145,6 +157,10 @@ class SkillCheckScreen: UIViewController {
             total += player.getAthletics()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func deceptionCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
@@ -266,6 +282,9 @@ class SkillCheckScreen: UIViewController {
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
         
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
+        
         skillOUT.text = "Investigation"
         die1OUT.text = String(result.0)
         
@@ -290,6 +309,10 @@ class SkillCheckScreen: UIViewController {
             total += player.getInvestigation()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func medicineCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
@@ -324,6 +347,9 @@ class SkillCheckScreen: UIViewController {
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
         
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
+        
         skillOUT.text = "Nature"
         die1OUT.text = String(result.0)
         
@@ -348,10 +374,17 @@ class SkillCheckScreen: UIViewController {
             total += player.getNature()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func perceptionCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
+        
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
         
         skillOUT.text = "Perception"
         die1OUT.text = String(result.0)
@@ -377,6 +410,10 @@ class SkillCheckScreen: UIViewController {
             total += player.getPerception()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func prefromanceCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
@@ -469,6 +506,9 @@ class SkillCheckScreen: UIViewController {
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
         
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
+        
         skillOUT.text = "Slight Of Hand"
         die1OUT.text = String(result.0)
         
@@ -493,10 +533,17 @@ class SkillCheckScreen: UIViewController {
             total += player.getSlightOfHand()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func stealthCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
+        
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
         
         skillOUT.text = "Stealth"
         die1OUT.text = String(result.0)
@@ -522,10 +569,17 @@ class SkillCheckScreen: UIViewController {
             total += player.getStealth()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
     @IBAction func survivalCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2
+        
+        // strictly for stan.
+        if(result.2 < 10){total = 10}
         
         skillOUT.text = "Survival"
         die1OUT.text = String(result.0)
@@ -551,7 +605,12 @@ class SkillCheckScreen: UIViewController {
             total += player.getSurvival()
             totalOUT.text = String(total)
         }
+        
+        // strictly for stan.
+        if(result.2 < 10){crit.text = "Reliable Talent"}
+        else if(result.2 != 20){crit.text = ""}
     }
+    
     @IBAction func strengthCheck(_ sender: Any){
         let result = dice.getD20(adv:advantage, dis: disadvantage)
         var total:Int = result.2

@@ -11,7 +11,7 @@ import UIKit
  ************************** */
 class Player: NSObject {
     
-    var name:String = "Stan"
+    var name:String = "STAN"
     var proficiencyBonus:Int = 4
     var initiative:Int = 5
     var xp:Int = 119640
