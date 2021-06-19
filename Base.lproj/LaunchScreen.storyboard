@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="B2" translatesAutoresizingMaskIntoConstraints="NO" id="O7w-iX-408">
-                                <rect key="frame" x="75" y="281" width="240" height="334"/>
+                                <rect key="frame" x="63" y="313" width="240" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tmlLogo" translatesAutoresizingMaskIntoConstraints="NO" id="E13-2g-Xeg">
-                                <rect key="frame" x="75" y="109" width="275" height="164"/>
+                                <rect key="frame" x="75" y="107" width="275" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
