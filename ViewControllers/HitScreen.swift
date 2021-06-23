@@ -32,6 +32,7 @@ class HitScreen: UIViewController {
     @IBOutlet weak var sDie4OUT: UILabel!
     @IBOutlet weak var sDie5OUT: UILabel!
     @IBOutlet weak var sDie6OUT: UILabel!
+    @IBOutlet weak var sDie7OUT: UILabel!
     
    
 
@@ -52,6 +53,7 @@ class HitScreen: UIViewController {
         sDie4OUT.text = ""
         sDie5OUT.text = ""
         sDie6OUT.text = ""
+        sDie7OUT.text = ""
         
         
     }
@@ -95,6 +97,7 @@ class HitScreen: UIViewController {
             let sDie4 = dice.getD6()
             let sDie5 = dice.getD6()
             let sDie6 = dice.getD6()
+            let sDie7 = dice.getD6()
             
             total += (sDie1 + sDie2 + sDie3 + sDie4 + sDie5 + sDie6)
             
@@ -106,6 +109,7 @@ class HitScreen: UIViewController {
             sDie4OUT.text = String(sDie4)
             sDie5OUT.text = String(sDie5)
             sDie6OUT.text = String(sDie6)
+            sDie7OUT.text = String(sDie7)
         }
         else{
             sDie1OUT.text = ""
@@ -114,6 +118,7 @@ class HitScreen: UIViewController {
             sDie4OUT.text = ""
             sDie5OUT.text = ""
             sDie6OUT.text = ""
+            sDie7OUT.text = ""
         }
         
         totalOUT.text = String(total)

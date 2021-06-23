@@ -12,8 +12,7 @@ class AddXPScreen: UIViewController {
     @IBOutlet weak var currentXpLabel: UILabel!
     @IBOutlet weak var currentXpOUT: UILabel!
     
-    @IBOutlet weak var newXpLabel: UILabel!
-    @IBOutlet weak var newXpOUT: UILabel!
+    
     
     @IBOutlet weak var input: UITextField!
     
@@ -21,17 +20,14 @@ class AddXPScreen: UIViewController {
         super.viewDidLoad()
         currentXpLabel.text = "Current XP:"
         currentXpOUT.text = String(player.getXp())
-        newXpLabel.text = ""
-        newXpOUT.text = ""
     }
     @IBAction func addXp(_ sender: Any){
         if let number = Int(input.text!){
             player.addXp(number:number)
             
-            currentXpLabel.text = ""
-            currentXpOUT.text = ""
-            newXpLabel.text = "New XP:"
-            newXpOUT.text = String(player.getXp())
+            currentXpLabel.text = "New XP:"
+            currentXpOUT.text = String(player.getXp())
+            
             input.resignFirstResponder()
         }
     }

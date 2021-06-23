@@ -11,9 +11,7 @@ class TakeDamageScreen: UIViewController {
 
     @IBOutlet weak var currentHealthLabel: UILabel!
     @IBOutlet weak var currentHealthOUT: UILabel!
-    @IBOutlet weak var newHealthLabel: UILabel!
-    @IBOutlet weak var newHealthOUT: UILabel!
-    
+
     @IBOutlet weak var input: UITextField!
     
     
@@ -23,20 +21,14 @@ class TakeDamageScreen: UIViewController {
         
         currentHealthLabel.text = "Current Health:"
         currentHealthOUT.text = String(player.getHealth())
-        
-        newHealthLabel.text = ""
-        newHealthOUT.text = ""
     }
     
     @IBAction func takeDamage(_ sender: Any){
         if let damage = Int(input.text!){
             player.damage(number:damage)
             
-            currentHealthLabel.text = ""
-            currentHealthOUT.text = ""
-            
-            newHealthLabel.text = "New Health:"
-            newHealthOUT.text = String(player.getHealth())
+            currentHealthLabel.text = "New Health:"
+            currentHealthOUT.text = String(player.getHealth())
             
             input.resignFirstResponder()
         }
