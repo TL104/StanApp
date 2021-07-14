@@ -47,7 +47,7 @@ class DisplayStatsScreen: UIViewController {
         healthOUT.text = String(player.getHealth())
         xpOUT.text = String(player.getXp())
         proficiencyBonusOUT.text = String(player.getProficiencyBonus())
-        initiativeOUT.text = String(player.getInitiative())
+        initiativeOUT.text = String(player.getDexterity())
         
         acrobaticsOUT.text = String(player.getAcrobatics())
         animalHandlingOUT.text = String(player.getAnimalHandeling())

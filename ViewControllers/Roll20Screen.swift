@@ -27,7 +27,7 @@ class Roll20Screen: UIViewController {
     @IBAction func d20(_ sender: Any){
         var number:Int = Int.random(in: 1...20)
         die1OUT.text = String(number)
-        number += player.getInitiative()
+        number += player.getDexterity()
         totalOUT.text = String(number)
     }
     

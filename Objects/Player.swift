@@ -12,10 +12,9 @@ import UIKit
 class Player: NSObject {
     
     var name:String = "STAN"
-    var proficiencyBonus:Int = 4
-    var initiative:Int = 5
-    var xp:Int = 119640
-    var health:Int = 94
+    var proficiencyBonus:Int = 5
+    var xp:Int = 124940
+    var health:Int = 102
     
     func setHealth(number:Int){health = number}
     func setXp(number:Int){xp = number}
@@ -27,10 +26,11 @@ class Player: NSObject {
     
     func getName()->String{return name}
     func getProficiencyBonus()->Int{return proficiencyBonus}
-    func getInitiative()->Int{return initiative}
+    
     func getXp()->Int{return xp}
     func getHealth()->Int{return health}
-    
+
+// ----------------------------------------------------------------------------
     struct attributeNode{
         var modifier:Int = 0
         var equipmentBonus:Int = 0
@@ -81,6 +81,7 @@ class Player: NSObject {
         return (chrisma.modifier + chrisma.equipmentBonus)
     }
     
+// ----------------------------------------------------------------------------
     struct skillNode{
         var proficient:Bool = false
         var expertise:Bool = false
@@ -342,6 +343,4 @@ class Player: NSObject {
         else {return getWisdom() + survival.equipmentBonus}
     }
     
-    
-
 }
