@@ -37,7 +37,7 @@ class TakeDamageScreen: UIViewController {
     
 
     @IBAction func doneButton(_ sender: Any){
-        navigationController?.popToViewController(navigationController!.viewControllers[0], animated: true)
+        navigationController?.popToViewController(navigationController!.viewControllers[1], animated: true)
     }
 
 }

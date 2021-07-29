@@ -31,6 +31,7 @@ class Weapons: NSObject {
         else if(dwarvanThrower.proficiency){return (playerObj.getDexterity() + dwarvanThrower.bonus)}
         else{return dwarvanThrower.bonus}
     }
+    
     func getSgName()->String{return "Stan's Gauntlet"}
     func getStanGauntlet(playerObj:Player)->Int{
         

@@ -10,6 +10,7 @@ import UIKit
 var player:Player = Player()
 var dice:Dice = Dice()
 var weapon:Weapons = Weapons()
+var equipment:Equipment = Equipment()
 
 class MainMenuScreen: UIViewController {
     
